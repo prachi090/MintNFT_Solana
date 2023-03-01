@@ -1,0 +1,21 @@
+solana version ::  sh -c "$(curl -sSfL https://release.solana.com/v1.15.2/install)"
+export path  ::   export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+
+//step 1 :: building  
+    
+ // badh build.sh (generate program id)
+
+
+//step 1.2  "::" geentating logds
+    
+   //solana logs | grep "g3mC1gHMr5UyyWeUFmc521m4G4S7Qhdxk9q6WxBbpTr invode" -A 25
+   // g3mc1.... :: program id 
+
+ 
+
+//step 2 :: test
+
+  //npm i ( if node is not installed)
+  //npm run app   (generate the program ,token id)
+                  //  (in explore :: set devnet , paste token id )
