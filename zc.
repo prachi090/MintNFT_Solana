@@ -1,13 +1,14 @@
-solana version ::  sh -c "$(curl -sSfL https://release.solana.com/v1.15.2/install)"
+sola
+na version ::  sh -c "$(curl -sSfL https://release.solana.com/v1.15.2/install)"
 export path  ::   export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 
 
 //step 1 :: building  
     
- // badh build.sh (generate program id)
+ // bash build.sh (generate program id)
 
 
-//step 1.2  "::" geentating logds
+//step 1.2  "::" generating logs
     
    //solana logs | grep "g3mC1gHMr5UyyWeUFmc521m4G4S7Qhdxk9q6WxBbpTr invode" -A 25
    // g3mc1.... :: program id 

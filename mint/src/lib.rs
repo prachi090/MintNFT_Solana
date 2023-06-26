@@ -11,6 +11,7 @@ use {
     },
     spl_token::{
         instruction as token_instruction,
+        state::Mint,
     },
     spl_associated_token_account::{
         instruction as token_account_instruction,
@@ -55,7 +56,7 @@ fn process_instruction(
     )?;
 
     msg!("Initializing mint account...");
-    msg!("Mint: {}", mint.key);
+    msg!("Mint: {}", mint.key); 
     invoke(
         &token_instruction::initialize_mint(
             &token_program.key,
@@ -72,7 +73,7 @@ fn process_instruction(
         ]
     )?;
 
-    msg!("Creating token account...");
+    msg!("Creating token account...");  
     msg!("Token Address: {}", token_account.key);    
     invoke(
         &token_account_instruction::create_associated_token_account(
@@ -100,7 +101,7 @@ fn process_instruction(
             &token_account.key,
             &mint_authority.key,
             &[&mint_authority.key],
-            1,
+             10,
         )?,
         &[
             mint.clone(),
@@ -115,3 +116,10 @@ fn process_instruction(
 
     Ok(())
 }
+
+
+    
+    
+  
+
+

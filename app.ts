@@ -7,6 +7,7 @@ import {
     } from "@solana/spl-token" ;
 import {
      Connection ,
+     AccountInfo ,
      Keypair ,
      PublicKey ,
      SystemProgram ,
@@ -17,8 +18,8 @@ import {
 
     } from "@solana/web3.js" ;
 
+import { Mint } from "@solana/spl-token";
 import { CreateKeypairFormFile } from "./utils";
-
 import fs from 'mz/fs' ;
 import os from "os" ;
 import path from "path" ;
@@ -57,8 +58,8 @@ async function main() {
     
 
     //Derive mint address and asssociated token account address 
-      const mintKeypair  :  Keypair =  Keypair.generate();
-      const tokenaddresss = await getAssociatedTokenAddress(
+    const mintKeypair  :  Keypair =  Keypair.generate();
+    const tokenaddresss = await getAssociatedTokenAddress(
         mintKeypair.publicKey,
         wallet.publicKey ,
       );
@@ -136,4 +137,5 @@ main().then(
        process.exit(-1) ;
     }
 );
+
 
