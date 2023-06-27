@@ -50,6 +50,7 @@ fn process_instruction(
         ),
         &[
             mint.clone(),
+            
             mint_authority.clone(),
             token_program.clone(),
         ]
